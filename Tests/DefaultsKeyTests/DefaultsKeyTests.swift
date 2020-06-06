@@ -31,7 +31,7 @@ final class DefaultsKeyTests: XCTestCase {
         super.setUp()
         userDefaults = UserDefaults(suiteName: suiteName)!
     }
-    
+
     override func tearDown() {
         super.tearDown()
         userDefaults.removePersistentDomain(forName: suiteName)
