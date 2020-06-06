@@ -1,4 +1,16 @@
+<p align="left">
+<a href="https://github.com/natmark/DefaultsKey/actions">
+<img src="https://github.com/natmark/DefaultsKey/workflows/Swift/badge.svg?branch=master"
+alt="Build Status">
+</a>
+<a href="https://cocoapods.org/pods/DefaultsKey">
+<img src="https://img.shields.io/cocoapods/v/DefaultsKey.svg?style=flat"
+alt="Pods Version">
+</a>
+</p>
+
 # DefaultsKey
+
 DefaultsKey allows you to specify the type and defaultValue for UserDefaults.
 
 ## Usage
