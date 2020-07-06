@@ -32,7 +32,6 @@ public extension UserDefaults {
             removeObject(forKey: forKey.key)
         } else {
             let encoder = JSONEncoder()
-
             if let json = try? encoder.encode(Container(value: value)) {
                 set(json, forKey: forKey.key)
             }
@@ -44,7 +43,6 @@ public extension UserDefaults {
             return forKey.defaultValue
         } else {
             let decoder = JSONDecoder()
-
             guard let data = data(forKey: forKey.key), let object = try? decoder.decode(Container<T>.self, from: data) else {
                 return forKey.defaultValue
             }
