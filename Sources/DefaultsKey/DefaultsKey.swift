@@ -1,15 +1,5 @@
 import Foundation
 
-fileprivate protocol OptionalProtocol {
-    var isNil: Bool { get }
-}
-
-extension Optional: OptionalProtocol {
-    fileprivate var isNil: Bool {
-        return self == nil
-    }
-}
-
 public struct DefaultsKey<T> {
     public var key: String
     public var defaultValue: T
@@ -28,13 +18,9 @@ private struct Container<T: Codable>: Codable {
 
 public extension UserDefaults {
     func set<T: Codable>(value: T, forKey: DefaultsKey<T>) {
-        if let value = value as? OptionalProtocol, value.isNil {
-            removeObject(forKey: forKey.key)
-        } else {
-            let encoder = JSONEncoder()
-            if let json = try? encoder.encode(Container(value: value)) {
-                set(json, forKey: forKey.key)
-            }
+        let encoder = JSONEncoder()
+        if let json = try? encoder.encode(Container(value: value)) {
+            set(json, forKey: forKey.key)
         }
     }
 
