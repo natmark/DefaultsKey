@@ -20,7 +20,7 @@ import DefaultsKey
 
 extension DefaultsKey {
     static var firstLaunchedVersion: DefaultsKey<String?> {
-        return DefaultsKey<String?>(key: "first_launched_version", defaultValue: nil) 
+        return DefaultsKey<String?>(key: "first_launched_version", defaultValue: nil)
     }
 
     static var shouldShowAppRatingDialog: DefaultsKey<Bool> {

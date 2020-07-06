@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "DefaultsKey"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "Thin UserDefaults exteions"
   spec.description  = <<-DESC
 DefaultsKey allows you to specify the type and defaultValue for UserDefaults.
